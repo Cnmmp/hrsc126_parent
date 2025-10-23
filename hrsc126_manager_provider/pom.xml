@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>hrsc126_manager_model</module>
+        <module>hrsc126_manager_dao</module>
+        <module>hrsc126_manager_interface</module>
+        <module>hrsc126_manager_service</module>
+    </modules>
+    <parent>
+        <artifactId>hrsc126_parent</artifactId>
+        <groupId>com.huarui</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>hrsc126_manager_provider</artifactId>
+    <packaging>pom</packaging>
+    <dependencies>
+        <dependency>
+            <artifactId>hrsc126_common</artifactId>
+            <groupId>com.huarui</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <path>/</path>
+                    <port>8080</port>
+                    <url>http://192.168.25.129:8080/manager/text</url>
+                    <username>tomcat</username>
+                    <password>tomcat</password>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
