@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hrsc126_manager_wab:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="hrsc126_manager_wab.war">
+      <element id="artifact" artifact-name="hrsc126_manager_wab:war exploded" />
+    </root>
+  </artifact>
+</component>
